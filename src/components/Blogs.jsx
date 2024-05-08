@@ -1,17 +1,16 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import Card from "./Cards";
+import Spinner from "./Spinner";
 
 export default function Blogs() {
   const { loading, posts } = useContext(AppContext);
 
   return (
     <div>
-      <div className="max-w-[700px] mx-auto px-3 my-[100px]">
+      <div className="lg:max-w-[700px] mx-auto px-4 sm:flex sm:justify-center">
         {loading ? (
-          <div className="flex justify-center items-center -mt-20 h-screen">
-            <div className="spinner"></div>
-          </div>
+          <Spinner />
         ) : posts.length === 0 ? (
           <div>No Posts Found</div>
         ) : (

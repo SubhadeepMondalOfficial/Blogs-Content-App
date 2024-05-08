@@ -27,7 +27,9 @@ export default function Pagination() {
           )}
         </div>
         <div>
-          <button>Page {page} of 6</button>
+          <button>
+            Page {page} of {totalPages}
+          </button>
         </div>
       </div>
     </div>
